@@ -1,0 +1,40 @@
+  - platform: openhardwaremonitor
+    host: 192.168.15.10
+
+  - platform: systemmonitor
+    resources:
+      - type: processor_use
+      - type: processor_temperature
+      - type: memory_free
+      - type: memory_use
+      - type: memory_use_percent
+      - type: disk_use_percent
+        arg: /
+      - type: disk_use
+      - type: disk_free
+      - type: last_boot
+      - type: swap_use_percent
+      - type: swap_use
+      - type: swap_free
+  - platform: systemmonitor
+    resources:
+        - type: processor_use
+        - type: processor_temperature
+        - type: memory_free
+        - type: memory_use
+        - type: memory_use_percent
+        - type: disk_use_percent
+          arg: /
+        - type: disk_use
+        - type: disk_free
+        - type: last_boot
+        - type: swap_use_percent
+        - type: swap_use
+        - type: swap_free
+### CRIA SENSORES DO YOUTUBE ###
+  - platform: youtube
+    channel_id: UCbX3YkedQunLt7EQAdVxh7w # home assistant
+  - platform: youtube
+    channel_id: UCRgXcmbD0xlWnorEvtUEVqg # patte_tech
+  - platform: youtube
+    channel_id: UCYsxByy8fykXCiQPtx0Molw # alguma_coisa_na_tecnologia

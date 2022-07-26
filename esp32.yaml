@@ -1,0 +1,97 @@
+esphome:
+  name: esp32
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+#api:
+#  encryption:
+#    key: "rgbGPkmu0JKGIHr+p2dCGZlya+8BW6/WfHQlTERIem0="
+
+ota:
+  password: "LoboAlfa"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp32 Hotspot"
+    password: "LoboAlfa"
+    
+  manual_ip:
+    static_ip: 192.168.15.50
+    gateway: 192.168.15.1
+    subnet: 255.255.255.0
+
+captive_portal:
+
+mqtt:
+  broker: 192.168.15.30
+  port: 1883
+  username: RobsonBrasil
+  password: !secret mqtt_password
+  discovery: true
+  birth_message:
+    topic: ESP32/status
+    payload: online
+  will_message:
+    topic: ESP32/status
+    payload: offline
+    
+# Example configuration.yaml entry
+switch:
+  - platform: gpio
+    name: "Botao1"
+    pin:
+      number: GPIO23
+      inverted: yes
+  
+  - platform: gpio
+    name: "Botao2"
+    pin:
+      number: GPIO22
+      inverted: yes
+  
+  - platform: gpio
+    name: "Botao3"
+    pin:
+      number: GPIO21
+      inverted: yes
+    
+  - platform: gpio
+    name: "Botao4"
+    pin:
+      number: GPIO19
+      inverted: yes
+      
+  - platform: gpio
+    name: "Botao5"
+    pin:
+      number: GPIO18
+      inverted: yes
+  
+  - platform: gpio
+    name: "Botao6"
+    pin:
+      number: GPIO5
+      inverted: yes
+  
+  - platform: gpio
+    name: "Botao7"
+    pin:
+      number: GPIO25
+      inverted: yes
+    
+  - platform: gpio
+    name: "Botao8"
+    pin:
+      number: GPIO26
+      inverted: yes

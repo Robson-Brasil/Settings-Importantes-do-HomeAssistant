@@ -1,0 +1,88 @@
+  broker: 192.168.15.30
+  username: RobsonBrasil
+  password: LoboAlfa
+  light:
+    - name: "Interruptor 1"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor1/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor1/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Interruptor 2"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor2/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor2/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Interruptor 3"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor3/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor3/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Interruptor 4"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor4/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor4/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Interruptor 5"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor5/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor5/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Interruptor 6"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor6/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor6/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Interruptor 7"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor7/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor7/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Interruptor 8"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor8/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor8/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+    - name: "Ligar_Desligar Tudo"
+      command_topic: "ESP32/MinhaCasa/QuartoRobson/Ligar-DesligarTudo/Comando"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Ligar-DesligarTudo/Estado"
+      payload_on: "1"
+      payload_off: "0"
+      qos: 2
+      retain: true
+
+  sensor:
+    - name: "Temperatura"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Temperatura"
+      unit_of_measurement: 'ºC'
+
+    - name: "Umidade"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Umidade"
+      unit_of_measurement: '%'
+
+    - name: "Sensação Térmica"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/SensacaoTermica"
+      unit_of_measurement: 'ºC'
