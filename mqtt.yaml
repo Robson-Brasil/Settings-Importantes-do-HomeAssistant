@@ -1,6 +1,3 @@
-  broker: 192.168.15.30
-  username: RobsonBrasil
-  password: LoboAlfa
   light:
     - name: "Interruptor 1"
       command_topic: "ESP32/MinhaCasa/QuartoRobson/Interruptor1/Comando"
@@ -86,3 +83,6 @@
     - name: "Sensação Térmica"
       state_topic: "ESP32/MinhaCasa/QuartoRobson/SensacaoTermica"
       unit_of_measurement: 'ºC'
+      
+    - name: "Sensor PIR"
+      state_topic: "ESP32/MinhaCasa/QuartoRobson/Motion"

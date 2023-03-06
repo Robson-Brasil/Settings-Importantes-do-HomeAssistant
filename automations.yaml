@@ -1,1 +1,47 @@
-[]
+- alias: Ativar luz quando a temperatura do processador estiver alta
+  trigger:
+    platform: openhardwaremonitor
+    entity_id: sensor.robsonbrasil_intel_core_i7_4500u_temperatures_cpu_package
+    above: 45
+  action:
+    service: light.turn_on
+    entity_id: light.interruptor_3
+  id: 5341ff45d53743518262feb6d1eaffbb
+- alias: Desativar luz quando a temperatura do processador voltar ao normal
+  trigger:
+    platform: openhardwaremonitor
+    entity_id: sensor.robsonbrasil_intel_core_i7_4500u_temperatures_cpu_package
+    below: 40
+  action:
+    service: light.turn_off
+    entity_id: light.interruptor_3
+  id: 7226ffa1412e49e89670885018a5177f
+- id: '1677802729694'
+  alias: Cooler do Notebook Ligado
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.robsonbrasil_intel_core_i7_4500u_temperatures_cpu_package
+    above: 50
+  condition: []
+  action:
+  - service: light.turn_on
+    data: {}
+    target:
+      entity_id: light.interruptor_3
+  mode: single
+- id: '1677804687083'
+  alias: Cooler do Notebook Desligado
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.robsonbrasil_intel_core_i7_4500u_temperatures_cpu_package
+    below: 45
+    above: 0
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.interruptor_3
+  mode: single

@@ -1,0 +1,79 @@
+- id: '1659318381721'
+  name: Nova cena
+  entities:
+    light.interruptor_1:
+      supported_color_modes:
+      - onoff
+      friendly_name: Interruptor 1
+      supported_features: 0
+      state: 'off'
+    light.interruptor_2:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Interruptor 2
+      supported_features: 0
+      state: 'on'
+    light.interruptor_3:
+      supported_color_modes:
+      - onoff
+      friendly_name: Interruptor 3
+      supported_features: 0
+      state: 'off'
+    light.interruptor_4:
+      supported_color_modes:
+      - onoff
+      friendly_name: Interruptor 4
+      supported_features: 0
+      state: 'off'
+    light.interruptor_5:
+      supported_color_modes:
+      - onoff
+      friendly_name: Interruptor 5
+      supported_features: 0
+      state: 'off'
+    light.interruptor_6:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Interruptor 6
+      supported_features: 0
+      state: 'on'
+    light.interruptor_7:
+      supported_color_modes:
+      - onoff
+      friendly_name: Interruptor 7
+      supported_features: 0
+      state: 'off'
+    light.interruptor_8:
+      supported_color_modes:
+      - onoff
+      friendly_name: Interruptor 8
+      supported_features: 0
+      state: 'off'
+    light.ligar_desligar_tudo:
+      supported_color_modes:
+      - onoff
+      friendly_name: Ligar_Desligar Tudo
+      supported_features: 0
+      state: 'off'
+  icon: mdi:account
+  metadata:
+    light.interruptor_1:
+      entity_only: true
+    light.interruptor_2:
+      entity_only: true
+    light.interruptor_3:
+      entity_only: true
+    light.interruptor_4:
+      entity_only: true
+    light.interruptor_5:
+      entity_only: true
+    light.interruptor_6:
+      entity_only: true
+    light.interruptor_7:
+      entity_only: true
+    light.interruptor_8:
+      entity_only: true
+    light.ligar_desligar_tudo:
+      entity_only: true

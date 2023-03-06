@@ -10,6 +10,49 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include sensor.yaml
 mqtt: !include mqtt.yaml
+group: !include group.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
+
+#Para monitorar (ligado/desligado)
+binary_sensor:
+  - platform: ping
+    host: 192.168.15.35
+    name: "meucelular"
+    count: 2
+    scan_interval: 30
+  #Para monitorar (ligado/desligado)
+  - platform: ping
+    host: 192.168.15.10
+    name: "notebook"
+    count: 2
+    scan_interval: 30
+
+#Rastreamento
+device_tracker:
+  - platform: ping
+    hosts:
+      meucelular: 192.168.15.35
+  #Rastreamento
+  - platform: ping
+    hosts:
+      notebook: 192.168.15.10
+
+# Custom Panels
+panel_custom:
+  - name: Supervisor
+    url_path: hassio/system
+    sidebar_title: Supervisor
+    sidebar_icon: mdi:home-assistant
+    module_url: /local/panel-redirect.js
+    
+#DuckDNS
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 10.0.0.200    
+    - 172.30.33.0/24
+    - 192.168.15.0/24

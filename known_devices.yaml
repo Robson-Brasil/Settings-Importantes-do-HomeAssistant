@@ -1,0 +1,14 @@
+
+meucelular:
+  name: meucelular
+  mac:
+  icon:
+  picture:
+  track: true
+
+notebook:
+  name: notebook
+  mac:
+  icon:
+  picture:
+  track: true
